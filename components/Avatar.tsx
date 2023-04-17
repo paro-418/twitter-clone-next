@@ -22,6 +22,7 @@ const Avatar: React.FC<AvatarProps> = ({ userId, isLarge, hasBorder }) => {
   );
   return (
     <div
+      onClick={onClick}
       className={`
   ${hasBorder ? 'border-4 border-black' : ''}
   ${isLarge ? 'h-32' : 'h-12'}
