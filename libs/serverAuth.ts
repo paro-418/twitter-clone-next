@@ -6,6 +6,7 @@ const serverAuth = async (req: NextApiRequest) => {
   const session = await getSession({
     req,
   });
+  console.log(session, 'SESSION FROM GET SESSION');
 
   if (!session?.user?.email) {
     throw new Error('Not signed in');
