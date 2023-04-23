@@ -33,5 +33,9 @@ export default async function handler(
     });
 
     return res.status(200).json(post);
-  } catch (err) {}
+  } catch (err) {
+    return res.status(400).json({
+      message: 'can not find post',
+    });
+  }
 }
